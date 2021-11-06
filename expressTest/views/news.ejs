@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новостная страница с ID: <%= newsId %>
+    </title>
+    <link rel="stylesheet" href="public/css/style.css" type="text/css">
+</head>
+
+<body>
+    <%- include ('blocks/header') -%>
+    <h1>Новостная страница с ID: <%= newsId %>
+    </h1>
+    <p>
+        <%= newParam %>
+    </p>
+    <h2>
+        <%= obj.title %>: <%= obj.id %>
+    </h2>
+
+    <ul>
+        <% obj.paragraphs.forEach(function(item){%>
+            <li>
+                <%= item %>
+            </li>
+            <% }) %>
+    </ul>
+</body>
+
+</html>
